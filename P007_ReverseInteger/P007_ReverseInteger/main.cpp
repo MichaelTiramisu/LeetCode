@@ -5,7 +5,6 @@
 //  Created by Michael Liu on 2017/3/8.
 //  Copyright © 2017年 Michael Liu. All rights reserved.
 //
-// 我觉得这道题还可以用二进制
 
 #include <iostream>
 #include <vector>
@@ -27,8 +26,20 @@ public:
         // Check to see if the number is overflow
         // Get all the bits of the result
         vector<int> resultBits = decomposeNumber(result);
+        // Look up how many 0s at the end of the initial number
+        // And add the number of 0s to the result bits array
+        // This is needed for the judgement
+        for (int i = 0; i < numberBits.size(); i++)
+        {
+            if (numberBits[i] != 0)
+                break;
+            // Add 0 to the result bits
+            resultBits.push_back(0);
+        }
         // reverse the result
         std::reverse(resultBits.begin(), resultBits.end());
+        
+        
         // Judge if they are same
         // Look at the length first
         if (numberBits.size() != resultBits.size())
@@ -80,7 +91,7 @@ public:
 int main(int argc, const char * argv[]) {
     
     Solution solution;
-    int number = 10;
+    int number = 2147483647;
     auto newNumber = solution.reverse(number);
     
     return 0;
