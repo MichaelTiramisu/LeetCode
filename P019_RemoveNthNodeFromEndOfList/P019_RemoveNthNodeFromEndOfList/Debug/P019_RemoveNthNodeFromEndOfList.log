@@ -1,0 +1,3 @@
+﻿  main.cpp
+c:\users\lsy\desktop\leetcode\p019_removenthnodefromendoflist\p019_removenthnodefromendoflist\main.cpp(64): warning C4018: '<': signed/unsigned mismatch
+  P019_RemoveNthNodeFromEndOfList.vcxproj -> C:\Users\LSY\Desktop\LeetCode\P019_RemoveNthNodeFromEndOfList\Debug\P019_RemoveNthNodeFromEndOfList.exe
